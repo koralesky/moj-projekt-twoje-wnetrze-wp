@@ -1,0 +1,41 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+	.navigation{
+		.active{
+			background: #605e79;
+		}
+	}
+	main{
+		font-size: 1.1rem;
+	}
+	
+	.section-pricing{
+		.basic{
+			height:100vh !important;
+		}
+		.extended{
+			height:100vh !important;
+		}
+			.content{
+				top:42% !important;
+			
+		}
+	}
+	.section-contact{
+		.content{
+			top:15%;
+		}
+	}
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    
+ }
