@@ -18,12 +18,12 @@
 		</section>
 		  
 		<section class="section-about section" data-anchor="about-me">
-			<div class="container content">
+			<div class="container-fluid content">
 				<div class="row">
-					<div class="col mx-auto">
+					<div class="col-10 mx-auto">
 						<h1 class="mb-4 text-center">O mnie</h1>
 						<div class="row">
-							<div class="col-12 col-lg-6 mt-lg-3">
+							<div class="col-12 col-lg-5 mt-lg-3">
 								<p>
 									Projektuję wnętrza spersonalizowane, dla konkretnych osób z
 									  ich wymaganiami funkcjonalnymi, ale także i upodobaniami
@@ -43,30 +43,81 @@
 		</section>
 		  
 		  <section class="section-pricing text-center m-0 section" data-anchor="pricing">
+			  <div class="container content">
 			  <div class="row">
-			  <div class="col-12 d-lg-none">
-				  <div class="filler"></div>
-			  </div>
-			  <div class="col-12 col-lg-6 p-0">
-				<a href="#">
-					<div class="basic">
-						<div class="content">
-							<h1 class="py-3">Pakiet podstawowy</h1>
-						</div>
-						
-					</div>
-				</a>
-				 </div>
-				  <div class="col-12 col-lg-6 p-0">
-				<a href="#">
-					<div class="extended">
-						<div class="content">
-							<h1 class="py-3">Pakiet rozszerzony</h1>
-						</div>
-					</div>
-				</a>
+			  <div class="col-12">
+				  <h1 class="mb-5">Cennik</h1>
+				  <div class="row">
+					  <div class="col-12 col-lg-6 mb-4">
+					  <div class="card card-cascade">
+
+<!-- Card image -->
+<div class="view view-cascade overlay d-none d-lg-block">
+  <img class="card-img-top img-fluid" src="<?php echo get_template_directory_uri() . '/assets/rzut2d.png'?>" alt="Pakiet podstawowy">
+  <a href="<?php echo get_home_url()?>/pakiet-podstawowy">
+	<div class="mask rgba-white-slight"></div>
+  </a>
+</div>
+
+<!-- Card content -->
+<div class="card-body card-body-cascade text-center mt-3">
+
+  <!-- Title -->
+  <h4 class="card-title"><strong>Pakiet podstawowy</strong></h4>
+  <!-- Subtitle -->
+  <!-- Text -->
+  <div class="d-none d-lg-block">
+  
+
+	</div>
+</div>
+
+<!-- Card footer -->
+<a href="<?php echo get_home_url()?>/pakiet-podstawowy"><div class="card-footer text-center">
+  Zobacz szczegóły
+</div>
+</a>
+</div>
+					  </div>
+
+					  <div class="col-12 col-lg-6">
+					  <div class="card card-cascade">
+
+<!-- Card image -->
+<div class="view view-cascade overlay d-none d-lg-block">
+  <img class="card-img-top img-fluid" src="<?php echo get_template_directory_uri() . '/assets/interior3d.png'?>" alt="Card image cap">
+  <a href="<?php echo get_home_url()?>/pakiet-rozszerzony">
+	<div class="mask rgba-white-slight"></div>
+  </a>
+</div>
+
+<!-- Card content -->
+<div class="card-body card-body-cascade text-center mt-3">
+
+  <!-- Title -->
+  <h4 class="card-title"><strong>Pakiet rozszerzony</strong></h4>
+  <!-- Subtitle -->
+  <!-- Text -->
+  <div class="d-none d-lg-block">
+  
+
+	</div>
+</div>
+
+<!-- Card footer -->
+<a href="<?php echo get_home_url()?>/pakiet-rozszerzony"><div class="card-footer text-center">
+  Zobacz szczegóły
+</div>
+</a>
+</div>
+					  </div>
 				  </div>
-				  </div>
+				</div>
+				</div>
+
+
+				
+				</div>
 		</section>
 		
 		  <section class="section-projects section" data-anchor="projects">
@@ -78,9 +129,48 @@
 							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
 						</p>
 						<div class="row d-none d-lg-block">
-							ASD
+						
+
+						<?php 
+
+							$posts = get_posts(array(
+								'posts_per_page'	=> 4,
+							'post_type'			=> 'post',
+							'cat' => 2
+							));
+
+							if( $posts ): ?>
+
+
+								
+								<div class="card-deck py-2 m-2">
+									
+								<?php foreach( $posts as $post ): 
+									
+									setup_postdata( $post );
+									
+									?>
+								<a class="car-link" href="<?php the_permalink(); ?>">
+									<div class="card"> <img src="<?php the_post_thumbnail_url('front-thumb');?>" class="img-fluid">
+										<div class="card-body text-center">
+											<h5 class="card-title"><?php the_title(); ?></h5>
+										</div>
+										</div>
+								</a>
+								
+								
+								
+								
+								<?php endforeach; ?>
+								
+								</div>
+								
+								<?php wp_reset_postdata(); ?>
+
+						<?php endif; ?>
+							
 						</div>
-						<a href="#" class="btn action-btn mt-2">ZOBACZ GALERIĘ</a>
+						<a href="<?php echo get_home_url(  )?>/projekty" class="btn action-btn mt-2">ZOBACZ GALERIĘ</a>
 					</div>
 					  </div>
 			  </div>

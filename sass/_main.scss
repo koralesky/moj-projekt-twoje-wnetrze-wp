@@ -1,6 +1,23 @@
 *{
 	box-sizing: border-box;
+	
 }
+
+.page-id-7{
+	background:linear-gradient(45deg, #6d4949, #daa360) no-repeat center center fixed;
+	color:white;
+}
+
+.page-id-21{
+	background: linear-gradient(45deg, #be7273, #6d4949) no-repeat center center fixed;
+	color:white;
+}
+
+.page-id-24, .single{
+	background: linear-gradient(45deg, #3d4b5c, #6d4949) fixed;
+	color:white;
+}
+
 
 main{
 	section{
@@ -33,45 +50,29 @@ main{
 	}
 	
 	.section-pricing{
+		background:linear-gradient(45deg, #6d4949, #daa360);
+
+		
 		a:hover{
 			text-decoration:none;
 		}
 		div{
 			h1{
-				color:$mptw-blue2;
+				color:white;
 				font-size:2rem;
 			}
 		}
-		.filler{
-			height:10vh;
-			background: $blue-gradient;
-		}
-		.basic{
-			height:45vh;
-			background:linear-gradient(45deg, #6d4949, #daa360);
-			.content{
-				background-color:rgba(255,255,255,0.3);
-				box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
-				position:relative;
-				top:42.5%;
-				
-			}
-		}
-		.extended{
-			height:45vh;
-			background:linear-gradient(45deg, #be7273, #6d4949);
-			.content{
-				background-color:rgba(255,255,255,0.3);
-				box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
-				position:relative;
-				top:37%;
-			}
-		}
+		
+		
+		
 	}
 	
 	.section-projects{
 		background: linear-gradient(45deg, #3d4b5c, #6d4949);
 		color:white;
+		h5{
+			color:black;
+		}
 	}
 	
 	.section-contact{
@@ -85,6 +86,18 @@ main{
 			font-size:.85rem;
 		}
 	}
+
+	.projects-site{
+
+		
+		h1{
+			color:white;
+		}
+		h3{
+			color:black;
+		}
+		
+	}
 	
 	.content-welcome{
 		position:relative;
@@ -92,7 +105,7 @@ main{
 	}
 	.content{
 		position:relative;
-		top:25%;
+		top:20%;
 	}
 }
 
@@ -103,6 +116,6 @@ main{
 	color:white;
 	font-family:'Ubuntu';
 	font-weight:700;
-	font-size:.75rem;
-	padding: 0.575rem 1.25rem;
+	font-size:1rem;
+	padding: 0.675rem 1.55rem;
 }

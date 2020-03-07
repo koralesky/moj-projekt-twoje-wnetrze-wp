@@ -14,25 +14,54 @@
 	}
 	main{
 		font-size: 1.1rem;
-	}
-	
-	.section-pricing{
-		.basic{
-			height:100vh !important;
+
+		.section-welcome{
+			.welcome-text{
+				font-size:1.5em;
+					h1{
+						font-size:1.5em;
+					}
+			}
+			
+			
 		}
-		.extended{
-			height:100vh !important;
-		}
+		.section-about{
+			background:url('assets/projektant-wnetrz-olga-malowska.jpg') no-repeat 0 80px ;
+			background-size:cover;
 			.content{
-				top:42% !important;
+				top:30%;
+				h1{
+					font-size:2.5rem;
+				}
+				p{
+					background-color: rgba(255,255,255,0.1);
+					border-radius:.2rem;
+					padding: 4rem;
+					box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);
+				}
+			}
+		}
+
+		.section-pricing{
+
+			
+			.content{
+				top:15%;
+			}
+				
+		}
+		.section-contact{
+			.content{
+				top:15%;
+			}
+		}
+		.projects-site{
+			height:100vh;
 			
 		}
 	}
-	.section-contact{
-		.content{
-			top:15%;
-		}
-	}
+	
+	
  }
 
 // Extra large devices (large desktops, 1200px and up)

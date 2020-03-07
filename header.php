@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php wp_head();?>
 </head>
-<body>
+<body <?php body_class( );?>>
 
 <header>
 		<nav class="navbar navbar-expand-lg navbar-dark navigation fixed-top">
@@ -36,6 +36,13 @@
       </li>
     
   </div>
+  <?php elseif(is_single( )):?>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo get_home_url( );?>">Strona główna</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo get_home_url( ) . '/projekty';?>"> Projekty</a>
+    </li>
   <?php elseif(!is_front_page()):?>
     <li class="nav-item">
         <a class="nav-link" href="<?php echo get_home_url( );?>">Powrót do strony głównej</a>
