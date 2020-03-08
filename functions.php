@@ -33,9 +33,12 @@
         wp_register_script('mdbootstrapjsbundle', 'https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/js/mdb.min.js', array('jquery'));
         wp_enqueue_script( 'mdbootstrapjsbundle');
 
+        
+
         wp_register_script('fullpagejs', 'https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js');
         wp_enqueue_script( 'fullpagejs');
 
+        
         wp_register_script('scripts', get_template_directory_uri() . '/js/app.js', ' ', null, true);
         wp_enqueue_script( 'scripts' );
     }

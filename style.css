@@ -6,10 +6,11 @@
   text-transform: uppercase;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  font-weight: bold;
-  font-size: 1.05rem;
+  padding: 0.2rem 1rem;
+}
+
+.navigation .nav-link {
+  position: relative;
 }
 
 .navigation .nav-link:after {
@@ -201,6 +202,24 @@ main .content {
   top: 20%;
 }
 
+main .package-page .price-element {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.24);
+  border-radius: 3px;
+  margin: 0.8vh 0px;
+  padding: 0.5vh;
+  padding-top: 0.5vh;
+  padding-top: 1vh;
+  text-align: center;
+  font-family: "Ubuntu";
+  color: black;
+}
+
+main .package-page .price-element p strong {
+  margin-bottom: 2rem;
+}
+
 .action-btn {
   background: -webkit-gradient(linear, left bottom, right top, from(#2c3e50), to(#3d4b5c));
   background: linear-gradient(to top right, #2c3e50, #3d4b5c);
@@ -213,7 +232,7 @@ main .content {
 
 @media (min-width: 992px) {
   .navigation .active {
-    background: #605e79;
+    background: rgba(255, 255, 255, 0.1);
   }
   main {
     font-size: 1.1rem;
