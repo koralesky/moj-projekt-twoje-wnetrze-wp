@@ -20,7 +20,7 @@
   <?php if(is_front_page()):?>
     
       <li class="nav-item">
-        <a class="nav-link" href="#welcome" data-menuanchor="welcome">Home</a>
+        <a class="nav-link" href="#welcome" data-menuanchor="welcome">Strona Główna</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#about-me" data-menuanchor="about-me">O mnie</a>
@@ -38,15 +38,36 @@
   </div>
   <?php elseif(is_single( )):?>
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo get_home_url( );?>">Strona główna</a>
+        <a class="nav-link" href="<?php echo get_home_url( );?>">Strona Główna</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="<?php echo get_home_url( ) . '/projekty';?>"> Projekty</a>
     </li>
+
+    <?php elseif(!is_front_page() & is_page_template('page-package.php')):?>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo get_home_url( );?>">Strona Główna</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="<?php echo get_home_url( ) . '/#pricing';?>">Cennik</a>
+    </li>
+      <?php if(is_page(7)):?>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo get_home_url( ) . '/pakiet-rozszerzony';?>">Pakiet rozszerzony</a>
+        </li>
+      <?php else:?>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo get_home_url( ) . '/pakiet-podstawowy';?>">Pakiet podstawowy</a>
+        </li>
+      <?php endif;?>
+
   <?php elseif(!is_front_page()):?>
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo get_home_url( );?>">Powrót do strony głównej</a>
+        <a class="nav-link" href="<?php echo get_home_url( );?>">Strona Główna</a>
     </li>
+
+
+  
   <?php endif;?>
   
   </ul>

@@ -5,9 +5,7 @@
 				<div class="row text-center ">
 					<div class="col mx-auto">
 						<span class="welcome-text">
-							Spotkajmy się i porozmawiajmy zupełnie niezobowiązująco, by
-							hasło <h1>„Mój projekt,
-							Twoje wnętrze”</h1> stało się rzeczywistością.
+							<?php the_field('hero_tekst');?>
 						</span>
 						<br>
 					<a href="#about-me" class="btn action-btn mt-2">ZAPRASZAM</a>
@@ -25,13 +23,7 @@
 						<div class="row">
 							<div class="col-12 col-lg-5 mt-lg-3">
 								<p>
-									Projektuję wnętrza spersonalizowane, dla konkretnych osób z
-									  ich wymaganiami funkcjonalnymi, ale także i upodobaniami
-									  estetycznymi. Najbardziej cenię w sobie uczciwość i pracowitość,
-									  a podstawę mojej pracy stanowi kontakt z Klientem – uważam,
-									  że wspólne zrozumienie to 50% sukcesu. W praktyce najlepiej
-									  sprawdza się marketing szeptany, więc jeśli czytasz tę ofertę,
-									  najprawdopodobniej oznacza ona zadowolonego polecającego.
+									<?php the_field('tekst_o_mnie');?>
 								</p>
 							</div>
 							
@@ -44,11 +36,11 @@
 		  
 		  <section class="section-pricing text-center m-0 section" data-anchor="pricing">
 			  <div class="container content">
-			  <div class="row">
-			  <div class="col-12">
+			  <div class="row justify-content-center">
+			  <div class="col-12 mx-auto">
 				  <h1 class="mb-5">Cennik</h1>
-				  <div class="row">
-					  <div class="col-12 col-lg-6 mb-4">
+				  <div class="row justify-content-center">
+					  <div class="col-12 col-lg-5 mb-4">
 					  <div class="card card-cascade">
 
 <!-- Card image -->
@@ -60,7 +52,7 @@
 </div>
 
 <!-- Card content -->
-<div class="card-body card-body-cascade text-center mt-3">
+<div class="card-body card-body-cascade text-center pt-4">
 
   <!-- Title -->
   <h4 class="card-title"><strong>Pakiet podstawowy</strong></h4>
@@ -80,7 +72,7 @@
 </div>
 					  </div>
 
-					  <div class="col-12 col-lg-6">
+					  <div class="col-12 col-lg-5">
 					  <div class="card card-cascade">
 
 <!-- Card image -->
@@ -92,7 +84,7 @@
 </div>
 
 <!-- Card content -->
-<div class="card-body card-body-cascade text-center mt-3">
+<div class="card-body card-body-cascade text-center pt-4">
 
   <!-- Title -->
   <h4 class="card-title"><strong>Pakiet rozszerzony</strong></h4>
@@ -126,7 +118,7 @@
 			  	<div class="col">
 						<h1 class="mb-4 text-center">Projekty</h1>
 						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+							<?php the_field('tekst_projekty');?> 
 						</p>
 						<div class="row d-none d-lg-block">
 						
@@ -182,7 +174,7 @@
 			  	<div class="col">
 						<h1 class="mb-4 text-center">Kontakt ze mną</h1>
 						<p>
-							Jeśli masz jakieś pytania, wypełnij proszę formularz.
+							<?php the_field('tekst_kontakt');?>
 						</p>
 						<div class="row">
 							<div class="d-none d-lg-block col-lg-9">

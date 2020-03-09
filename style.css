@@ -143,14 +143,17 @@ main .section-about {
 
 main .section-about p {
   text-align: justify;
-  word-break: normal;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  word-break: unset;
 }
 
 main .section-pricing {
   background: linear-gradient(45deg, #6d4949, #daa360);
+}
+
+main .section-pricing .card-body {
+  background: linear-gradient(45deg, #2c3e50, #3d4b5c);
+  background: linear-gradient(45deg, #3d4b5c, #6d4949);
+  color: white;
 }
 
 main .section-pricing a:hover {
